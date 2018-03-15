@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The *FeatureLearningRotNet* code implements the following ICLR2018 paper:    
+The current code implements the following ICLR2018 paper:    
 **Title:**      "Unsupervised Representation Learning by Predicting Image Rotations"    
 **Authors:**     Spyros Gidaris, Praveer Singh, Nikos Komodakis    
 **Institution:** Universite Paris Est, Ecole des Ponts ParisTech    
@@ -14,7 +14,7 @@ Over the last years, deep convolutional neural networks (ConvNets) have transfor
 
 ### Citing FeatureLearningRotNet
 
-If you find *FeatureLearningRotNet* useful in your research, please consider citing our ICLR2018 paper:
+If you find the code useful in your research, please consider citing our ICLR2018 paper:
 ```
 @inproceedings{
   gidaris2018unsupervised,
