@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The current code implements the following ICLR2018 paper:    
+The current code implements on [pytorch](http://pytorch.org/) the following ICLR2018 paper:    
 **Title:**      "Unsupervised Representation Learning by Predicting Image Rotations"    
 **Authors:**     Spyros Gidaris, Praveer Singh, Nikos Komodakis    
 **Institution:** Universite Paris Est, Ecole des Ponts ParisTech    
@@ -25,3 +25,18 @@ If you find the code useful in your research, please consider citing our ICLR201
   url={https://openreview.net/forum?id=S1v4N2l0-},
 }
 ```
+
+### License
+This code is released under the MIT License (refer to the LICENSE file for details). 
+
+### Before running the experiments
+* You must download the desired datasets and set in [dataloader.py](https://github.com/gidariss/FeatureLearningRotNet/blob/master/dataloader.py#L21) the paths to where the datasets reside in your machine.
+* Note that all the experiment configuration files are placed in the [./config](https://github.com/gidariss/FeatureLearningRotNet/tree/master/config) directory.
+
+### CIFAR-10 experiments
+* In order to train (in an unsupervised way) the RotNet model on the CIFAR-10 training images and then evaluate object classifiers on top of the RotNet-based learned features see the [run_cifar10_based_unsupervised_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_cifar10_based_unsupervised_experiments.sh) script.
+* In order to run the semi-supervised experiments on CIFAR-10 see the [run_cifar10_semi_supervised_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_cifar10_semi_supervised_experiments.sh) script.
+
+### ImageNet and Places205 experiments
+* In order to train (in an unsupervised way) a RotNet model with AlexNet-like architecture on the **ImageNet** training images and then evaluate object classifiers (for the ImageNet and Places205 classification tasks) on top of the RotNet-based learned features see the [run_imagenet_based_unsupervised_feature_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_imagenet_based_unsupervised_feature_experiments.sh) script.
+* In order to train (in an unsupervised way) a RotNet model with AlexNet-like architecture on the **Places205** training images and then evaluate object classifiers (for the ImageNet and Places205 classification tasks) on top of the RotNet-based learned features see the [run_places205_based_unsupervised_feature_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_places205_based_unsupervised_feature_experiments.sh) scritp.
