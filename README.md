@@ -30,7 +30,8 @@ If you find the code useful in your research, please consider citing our ICLR201
 This code is released under the MIT License (refer to the LICENSE file for details). 
 
 ### Before running the experiments
-* You must download the desired datasets and set in [dataloader.py](https://github.com/gidariss/FeatureLearningRotNet/blob/master/dataloader.py#L21) the paths to where the datasets reside in your machine.
+* Inside the *FeatureLearningRotNet* directory with the downloaded code you must create a directory named *experiments* where the experiments-related data will be stored: `mkdir experiments`.
+* You must download the desired datasets and set in [dataloader.py](https://github.com/gidariss/FeatureLearningRotNet/blob/master/dataloader.py#L21) the paths to where the datasets reside in your machine. We recommend creating a *datasets* directory `mkdir datasets` and placing the downloaded datasets there. 
 * Note that all the experiment configuration files are placed in the [./config](https://github.com/gidariss/FeatureLearningRotNet/tree/master/config) directory.
 
 ### CIFAR-10 experiments
@@ -47,3 +48,12 @@ This code is released under the MIT License (refer to the LICENSE file for detai
   1. The model is saved in pytorch format.   
   2. It is not the same as the one used in the paper and probably will give (slightly) different outcomes (in the ImageNet and Places205 classification tasks that it was tested it gave better results than the paper's model).    
   3. It expects RGB images that their pixel values are normalized with the following mean RGB values `mean_rgb = [0.485, 0.456, 0.406]` and std RGB values `std_rgb = [0.229, 0.224, 0.225]`. Prior to normalization the range of the image values must be [0.0, 1.0].
+
+
+ * In order to download the RotNet model (with AlexNet architecture) trained on the ImageNet training images using the current code and convered in caffe format, go to: [ImageNet_RotNet_AlexNet_caffe](https://mega.nz/#!ekVRlLJC!N23AlTHuGwJF87sS6f7QjUyGfVFllEOFVgKtcrvZvYk). Note that:   
+   1. The model is saved in caffe format.  
+   2. It is not the same as the one used in the paper and probably will give (slightly) different outcomes (in the PASCAL segmentation task it gives slightly better results than the paper's model).   
+   3. It expects BGR images that their pixel values are mean normalized with the following mean BGR values `mean_bgr = [0.406*255.0, 0.456*255.0, 0.485*255.0]`. Prior to normalization the range of the image values must be [0.0, 255.0].   
+   4. The weights of the model are rescaled with the approach of [Kraehenbuehl et al, ICLR 2016](https://github.com/philkr/magic_init).      
+   
+
