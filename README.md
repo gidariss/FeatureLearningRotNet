@@ -27,7 +27,7 @@ If you find the code useful in your research, please consider citing our ICLR201
 ```
 
 ### Requirements
-Pytorch version 0.2.0_4
+It was developed and tested with pytorch version 0.2.0_4
 
 ### License
 This code is released under the MIT License (refer to the LICENSE file for details). 
