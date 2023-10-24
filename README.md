@@ -38,7 +38,7 @@ This code is released under the MIT License (refer to the LICENSE file for detai
 * Note that all the experiment configuration files are placed in the [./config](https://github.com/gidariss/FeatureLearningRotNet/tree/master/config) directory.
 
 ### CIFAR-10 experiments
-* In order to train (in an unsupervised way) the RotNet model on the CIFAR-10 training images and then evaluate object classifiers on top of the RotNet-based learned features see the [run_cifar10_based_unsupervised_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_cifar10_based_unsupervised_experiments.sh) script. Pre-trained model (in pytorch format) is provided [here](https://mega.nz/#!bk8ggYRa!CJoP3yugsI31rFGVtAX0nFBFtL_4a6BMlP9h6N56KH0) (note that it is not exactly the same model used in the paper).
+* In order to train (in an unsupervised way) the RotNet model on the CIFAR-10 training images and then evaluate object classifiers on top of the RotNet-based learned features see the [run_cifar10_based_unsupervised_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_cifar10_based_unsupervised_experiments.sh) script. Pre-trained model (in pytorch format) is provided [here](https://github.com/gidariss/FeatureLearningRotNet/releases/download/v1/CIFAR10_RotNet_NIN4blocks.tar.gz) (note that it is not exactly the same model used in the paper).
 * In order to run the semi-supervised experiments on CIFAR-10 see the [run_cifar10_semi_supervised_experiments.sh](https://github.com/gidariss/FeatureLearningRotNet/blob/master/run_cifar10_semi_supervised_experiments.sh) script.
 
 ### ImageNet and Places205 experiments
@@ -47,13 +47,13 @@ This code is released under the MIT License (refer to the LICENSE file for detai
 
 
 ### Download the already trained RotNet model
-* In order to download the RotNet model (with AlexNet architecture) trained on the ImageNet training images using the current code, go to: [ImageNet_RotNet_AlexNet_pytorch](https://mega.nz/#!n81AnC6L!xTbo_D3xd7QOpOSG1UFSChmDr8mbcuWbVjhQMaC4yoE). Note that:   
+* In order to download the RotNet model (with AlexNet architecture) trained on the ImageNet training images using the current code, go to: [ImageNet_RotNet_AlexNet_pytorch](https://github.com/gidariss/FeatureLearningRotNet/releases/download/v1/ImageNet_RotNet_AlexNet.tar.gz). Note that:   
   1. The model is saved in pytorch format.   
   2. It is not the same as the one used in the paper and probably will give (slightly) different outcomes (in the ImageNet and Places205 classification tasks that it was tested it gave better results than the paper's model).    
   3. It expects RGB images that their pixel values are normalized with the following mean RGB values `mean_rgb = [0.485, 0.456, 0.406]` and std RGB values `std_rgb = [0.229, 0.224, 0.225]`. Prior to normalization the range of the image values must be [0.0, 1.0].
 
 
- * In order to download the RotNet model (with AlexNet architecture) trained on the ImageNet training images using the current code and convered in caffe format, go to: [ImageNet_RotNet_AlexNet_caffe](https://mega.nz/#!ekVRlLJC!N23AlTHuGwJF87sS6f7QjUyGfVFllEOFVgKtcrvZvYk). Note that:   
+ * In order to download the RotNet model (with AlexNet architecture) trained on the ImageNet training images using the current code and convered in caffe format, go to: [ImageNet_RotNet_AlexNet_caffe](https://github.com/gidariss/FeatureLearningRotNet/releases/download/v1/ImageNet_RotNet_Alexnet_caffe.tar.gz). Note that:   
    1. The model is saved in caffe format.  
    2. It is not the same as the one used in the paper and probably will give (slightly) different outcomes (in the PASCAL segmentation task it gives slightly better results than the paper's model).   
    3. It expects BGR images that their pixel values are mean normalized with the following mean BGR values `mean_bgr = [0.406*255.0, 0.456*255.0, 0.485*255.0]`. Prior to normalization the range of the image values must be [0.0, 255.0].   
